@@ -1,8 +1,3 @@
-<<<<<<< HEAD
+streamlit 
 joblib
 time
-=======
-joblib
-time
->>>>>>> 60a674eaa2e5d57cbca7ba288df76fbaabee67c8
-streamlit
