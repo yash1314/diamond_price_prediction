@@ -1,6 +1,7 @@
 import streamlit as st
 import time
 import joblib
+import sklearn
 
 @st.cache_resource()
 def model_load(path):
