@@ -7,12 +7,12 @@ The dataset used for this project is sourced from https://www.kaggle.com/competi
 # Installation
 To run the project locally, please ensure you have the following dependencies installed:
 
-Python 3.7 or higher
-NumPy
-Pandas
-Scikit-learn
-Matplotlib
-Jupyter Notebook
+- Python 3.7 or higher
+- NumPy
+- Pandas
+- Scikit-learn
+- Matplotlib
+- Jupyter Notebook
 
 # Results
 The results of the diamond price prediction are evaluated based on various metrics such as mean absolute error (MAE), root mean squared error (RMSE), and R-squared score. These metrics provide insights into the performance of the model and how well it predicts diamond prices.
