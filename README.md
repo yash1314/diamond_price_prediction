@@ -17,5 +17,8 @@ To run the project locally, please ensure you have the following dependencies in
 # Results
 The results of the diamond price prediction are evaluated based on various metrics such as mean absolute error (MAE), root mean squared error (RMSE), and R-squared score. These metrics provide insights into the performance of the model and how well it predicts diamond prices.
 
+# Run the app
+To access the web app click the link -> https://diamondpriceprediction-fht7etyruuqs8r2cho7nnb.streamlit.app/
+
 # Contributing
 Contributions are welcome! If you find any issues or have suggestions for improvement, please open an issue or submit a pull request. Make sure to follow the project's code of conduct.
