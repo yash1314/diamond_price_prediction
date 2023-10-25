@@ -7,7 +7,7 @@ def model_load(path):
     model = joblib.load(path)
     return model
 
-model = model_load('model\model1.joblib')
+model = model_load('model/model1.joblib')
 
 
 st.title('Diamond Price Prediction')
