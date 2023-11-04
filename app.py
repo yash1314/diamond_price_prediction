@@ -7,7 +7,7 @@ def model_load(path):
     model = joblib.load(path)
     return model
 
-model = model_load('model\model1.joblib')
+model = model_load('model/model1.joblib')
 
 
 st.title('Diamond Price Prediction')
@@ -46,7 +46,6 @@ if st.button('Predict'):
         time.sleep(1)
         bar.progress(100)
         
-
         # 3. result display
         st.header(f'The predicted price of diamond is: {result}$')
 
