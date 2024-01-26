@@ -46,7 +46,6 @@ with cols2:
 
 
 if st.button('Predict'):
-
     try:
         # prediction
         result = model.predict([[carat, cut, color, clarity, depth, table]])
