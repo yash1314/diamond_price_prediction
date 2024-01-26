@@ -1,3 +1,4 @@
+import pandas as pd
 import streamlit as st
 import time
 import joblib
@@ -21,7 +22,7 @@ with cols1:
     carat = st.slider(" ", 0.2, 3.5)
 
     st.markdown('#### Clarity')
-    clarity = st.slider(" ", 1, 10)
+    clarity = st.slider(" ", 1, 8)
 
     st.markdown('#### Depth')
     depth = st.slider(" ", 52, 72)
@@ -35,22 +36,23 @@ with cols2:
     st.markdown('#### Cut')
     cut = st.selectbox("Cut range : Fair, Good, Very Good, Premium, Ideal",
                        ["Fair", "Good", "Very Good", "Premium", "Ideal"])
+    cut = {'Fair': 1, 'Good': 2, 'Very Good': 3, 'Premium': 4, 'Ideal': 5}.get(cut)
 
 
     st.markdown('#### Color')
     color = st.selectbox('Color range : D, E, F, G, H, I, J',
                          ['D', 'E', 'F', 'G', 'H', 'I', 'J'])
+    color = {'D': 1, 'E': 2, 'F': 3, 'G': 4, 'H': 5, 'I': 6, 'J': 7}.get(color)
 
 
 if st.button('Predict'):
-    color = {'D':1, 'E':2, 'F':3, 'G':4, 'H':5, 'I':6, 'J':7}.get(color)
-    cut = {'Fair': 1, 'Good': 2, 'Very Good': 3, 'Premium': 4, 'Ideal': 5}.get(cut)
 
     try:
-        # 2. predicts
+        # prediction
         result = model.predict([[carat, cut, color, clarity, depth, table]])
 
     except Exception as e:
+        st.markdown(e)
         st.info('Enter valid details!')
 
     else:
@@ -59,4 +61,4 @@ if st.button('Predict'):
         bar.progress(100)
         
         # 3. result display
-        st.subheader('The predicted price of diamond is: {} $'.format(result))
+        st.subheader(f'The predicted price of diamond is: {result} $')
